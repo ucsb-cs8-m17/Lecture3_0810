@@ -8,7 +8,7 @@ t = turtle.Turtle()
 
 t.shape("turtle") 
 
-# Various ways of drawing things
+# A simple T
 
 t.forward (50)
 t.goto (25, 0)
