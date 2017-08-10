@@ -24,27 +24,23 @@ def drawT():
    t.forward (100)
    t.left(90)
 
-t.up()
-t.goto(-200,0)
-t.down()
-drawT()
+# REFACTORED...
+#  put the part that's the same into the function def
+#  put the parts that's different as parameter to function call
 
-t.up()
-t.goto(-100,0)
-t.down()
-drawT()
+def moveToNewPlace(x):
+  t.up()
+  t.goto(x,0)   
+  t.down()
+  drawT()
 
-t.up()
-t.goto(0,0)
-t.down()
-drawT()
+moveToNewPlace(-200)
 
-t.up()
-t.goto(100,0)
-t.down()
-drawT()
+moveToNewPlace(-100)
 
-t.up()
-t.goto(200,0)
-t.down()
-drawT()
+moveToNewPlace(0)
+
+moveToNewPlace(100)
+
+moveToNewPlace(200)
+

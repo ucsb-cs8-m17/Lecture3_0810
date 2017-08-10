@@ -8,11 +8,7 @@ t = turtle.Turtle()
 
 t.shape("turtle") 
 
-# One approach to T T T
-# Does not work:
-#  Assumptions about where we start,
-#  Which way we are facing
-#  Whether pen is up or down
+# A better approach...
 
 def drawT():
    '''

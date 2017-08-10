@@ -11,40 +11,29 @@ t.shape("turtle")
 # A better approach... now we can draw many Ts
 # But this is very repetitive.. it works, but...??!?!?
 
-def drawT():
+def drawT(width,height):
    '''
    draw a T
    assume turtle facing east (0), and leave it facing east
    assume pen is down
    no assumptions about position.
    '''
-   t.forward (50)
-   t.backward (25)
+   t.forward (width)
+   t.backward (width/2)
    t.right (90)
-   t.forward (100)
+   t.forward (height)
    t.left(90)
 
-t.up()
-t.goto(-200,0)
-t.down()
-drawT()
+# CONTINUE TO GENERALIZE...
+# 
 
-t.up()
-t.goto(-100,0)
-t.down()
-drawT()
+def moveToNewPlaceAndDrawT(x,y,width,height=100):
+  t.up()
+  t.goto(x,y)   
+  t.down()
+  drawT(width,height)
 
-t.up()
-t.goto(0,0)
-t.down()
-drawT()
+for y in range(-200,201,50):
+  for x in range(-200,201,50):
+     moveToNewPlaceAndDrawT(x,y,40,25)
 
-t.up()
-t.goto(100,0)
-t.down()
-drawT()
-
-t.up()
-t.goto(200,0)
-t.down()
-drawT()

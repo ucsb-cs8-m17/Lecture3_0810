@@ -24,27 +24,25 @@ def drawT():
    t.forward (100)
    t.left(90)
 
-t.up()
-t.goto(-200,0)
-t.down()
-drawT()
+# CONTINUE TO GENERALIZE...
+#  The old version had y hard-coded at 0
+#  The new version makes that a parameter
 
-t.up()
-t.goto(-100,0)
-t.down()
-drawT()
+def moveToNewPlace(x,y):
+  t.up()
+  t.goto(x,y)   
+  t.down()
+  drawT()
 
-t.up()
-t.goto(0,0)
-t.down()
-drawT()
+moveToNewPlace(-200,0)
 
-t.up()
-t.goto(100,0)
-t.down()
-drawT()
+moveToNewPlace(-100,0)
 
-t.up()
-t.goto(200,0)
-t.down()
-drawT()
+moveToNewPlace(0,0)
+
+moveToNewPlace(-200,-100)
+
+moveToNewPlace(-100,-100)
+
+moveToNewPlace(0,-100)
+
